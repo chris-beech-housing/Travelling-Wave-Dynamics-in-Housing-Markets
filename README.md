@@ -13,7 +13,7 @@ Abstract
 
 We analyse England and Wales transactional house price data to describe a robust, empirical regularity across two cycles: a systematic progression of ranked annual returns. It is shown that an analysis by Local Authority may seem intuitive, but an analysis by quantile, a change of the coordinates of the system, best describes how information propagates through housing markets.
 
-This travelling wave pattern, independent of the underlying house price growth, is not only a data- driven version of Ricardo’s Law of Rent but also a leading indicator of house market crashes.
+This travelling wave pattern, independent of the underlying house price growth, is not only a data-driven version of Ricardo’s Law of Rent but also a leading indicator of house market crashes.
 
 A simple model is proposed: the log-logistic distribution of house prices is subject to drift and diﬀusion; a constant-speed travelling wave ensures that over time the fastest-growing quantile travels from the highest to the lowest in order; when the travelling wave reaches the lowest quantile or margin, there is a crash in house prices. The trough is reached when the land value at the margin is again worth zero; subsequently, the cycle restarts.
 
