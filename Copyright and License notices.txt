@@ -1,0 +1,40 @@
+All data is subject to Copyright and should be downloaded directly from the appropriate .gov.uk or Bank of England website.
+
+Open Government Licence for public sector information
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+
+HM Land Registry Price Paid Data
+https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads
+Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government Licence v3.0.
+
+ONS Postcode Directory (August 2025) for the UK
+https://geoportal.statistics.gov.uk/datasets/3be72478d8454b59bb86ba97b4ee325b/about
+Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+
+Local Authority Districts (April 2025) Names and Codes in the UK
+https://www.data.gov.uk/dataset/b2c91962-58e7-40f1-ad56-7aa2473a93fd/local-authority-districts-april-2025-names-and-codes-in-the-uk-v21
+Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+
+Local Authority Districts (May 2025) Boundaries UK BFE
+https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-may-2025-boundaries-uk-bfe-v2/about
+Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+Contains OS data © Crown copyright and database right 2025
+
+Consumer price inflation time series (MM23), CPI INDEX 00: ALL ITEMS 2015=100
+https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23
+Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+
+ONS House price to workplace-based earnings ratio
+https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/
+ratioofhousepricetoworkplacebasedearningslowerquartileandmedian
+Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+
+Bank of England database
+https://www.bankofengland.co.uk/boeapps/database/
+© Copyright of the Governor and Company of the Bank of England
+Licensed under the Open Government Licence v.3.0
+
+Department for Levelling Up, Housing & Communities, Help to Buy Tables
+https://assets.publishing.service.gov.uk/media/64abb06ca32f130013f06907/Help_to_Buy_Tables.ods
+Licensed under the Open Government Licence v.3.0
