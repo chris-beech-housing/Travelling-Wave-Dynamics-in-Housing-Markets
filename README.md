@@ -2,7 +2,7 @@
 
 **A Data-Driven Ricardian Explanation of Housing Market Crashes**
 
-This working paper and code is my attempt to understand why housing markets crash. It is really three papers in one:
+This [working paper](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/blob/main/Travelling%20Wave%20Dynamics%20in%20Housing%20Markets.pdf) and code is my attempt to understand why housing markets crash. It is really three papers in one:
 
 * A major statistical analysis of England and Wales house price data
 * A interpretation of the results using Ricardo's Law of Rent
