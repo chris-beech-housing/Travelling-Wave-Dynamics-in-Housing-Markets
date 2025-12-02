@@ -1,0 +1,370 @@
+County or District,LA,Country code
+ADUR,Adur,E
+AMBER VALLEY,Amber Valley,E
+ARUN,Arun,E
+ASHFIELD,Ashfield,E
+ASHFORD,Ashford,E
+BABERGH,Babergh,E
+BARKING AND DAGENHAM,Barking and Dagenham,E
+BARNET,Barnet,E
+BARNSLEY,Barnsley,E
+BARROW-IN-FURNESS,Westmorland and Furness,E
+BASILDON,Basildon,E
+BASINGSTOKE AND DEANE,Basingstoke and Deane,E
+BASSETLAW,Bassetlaw,E
+BATH,Bath and North East Somerset,E
+BATH AND NORTH EAST SOMERSET,Bath and North East Somerset,E
+BEDFORD,Bedford,E
+BEXLEY,Bexley,E
+BIRMINGHAM,Birmingham,E
+BLABY,Blaby,E
+BLACKBURN,Blackburn with Darwen,E
+BLACKBURN WITH DARWEN,Blackburn with Darwen,E
+BLACKPOOL,Blackpool,E
+BLAENAU GWENT,Blaenau Gwent,W
+BOLSOVER,Bolsover,E
+BOLTON,Bolton,E
+BOOTHFERRY,East Riding of Yorkshire,E
+BOSTON,Boston,E
+BOURNEMOUTH,"Bournemouth, Christchurch and Poole",E
+"BOURNEMOUTH, CHRISTCHURCH AND POOLE","Bournemouth, Christchurch and Poole",E
+BRACKNELL FOREST,Bracknell Forest,E
+BRADFORD,Bradford,E
+BRAINTREE,Braintree,E
+BRECKLAND,Breckland,E
+BRENT,Brent,E
+BRENTWOOD,Brentwood,E
+BRIDGEND,Bridgend,W
+BRIGHTON,Brighton and Hove,E
+BRIGHTON AND HOVE,Brighton and Hove,E
+BRISTOL,"Bristol, City of",E
+BROADLAND,Broadland,E
+BROMLEY,Bromley,E
+BROMSGROVE,Bromsgrove,E
+BROXBOURNE,Broxbourne,E
+BROXTOWE,Broxtowe,E
+BUCKINGHAMSHIRE,Buckinghamshire,E
+BURNLEY,Burnley,E
+BURY,Bury,E
+CAERPHILLY,Caerphilly,W
+CALDERDALE,Calderdale,E
+CAMBRIDGE,Cambridge,E
+CAMDEN,Camden,E
+CANNOCK CHASE,Cannock Chase,E
+CANTERBURY,Canterbury,E
+CARDIFF,Cardiff,W
+CARLISLE,Cumberland,E
+CARMARTHENSHIRE,Carmarthenshire,W
+CASTLE POINT,Castle Point,E
+CENTRAL BEDFORDSHIRE,Central Bedfordshire,E
+CEREDIGION,Ceredigion,W
+CHARNWOOD,Charnwood,E
+CHELMSFORD,Chelmsford,E
+CHELTENHAM,Cheltenham,E
+CHERWELL,Cherwell,E
+CHESHIRE EAST,Cheshire East,E
+CHESHIRE WEST AND CHESTER,Cheshire West and Chester,E
+CHESTER,Cheshire West and Chester,E
+CHESTERFIELD,Chesterfield,E
+CHICHESTER,Chichester,E
+CHORLEY,Chorley,E
+CITY OF BRISTOL,"Bristol, City of",E
+CITY OF DERBY,Derby,E
+CITY OF KINGSTON UPON HULL,"Kingston upon Hull, City of",E
+CITY OF LONDON,City of London,E
+CITY OF NOTTINGHAM,Nottingham,E
+CITY OF PETERBOROUGH,Peterborough,E
+CITY OF PLYMOUTH,Plymouth,E
+CITY OF WESTMINSTER,Westminster,E
+CLEVELAND,Redcar and Cleveland,E
+COLCHESTER,Colchester,E
+CONGLETON,Cheshire East,E
+CONWY,Conwy,W
+COPELAND,Cumberland,E
+CORBY,North Northamptonshire,E
+CORNWALL,Cornwall,E
+COTSWOLD,Cotswold,E
+COUNTY DURHAM,County Durham,E
+COVENTRY,Coventry,E
+CRAWLEY,Crawley,E
+CREWE AND NANTWICH,Cheshire East,E
+CROYDON,Croydon,E
+CUMBERLAND,Cumberland,E
+DACORUM,Dacorum,E
+DARLINGTON,Darlington,E
+DARTFORD,Dartford,E
+DAVENTRY,West Northamptonshire,E
+DENBIGHSHIRE,Denbighshire,W
+DERBYSHIRE DALES,Derbyshire Dales,E
+DINEFWR,Carmarthenshire,W
+DONCASTER,Doncaster,E
+DORSET,Dorset,E
+DOVER,Dover,E
+DUDLEY,Dudley,E
+DURHAM,County Durham,E
+EALING,Ealing,E
+EAST CAMBRIDGESHIRE,East Cambridgeshire,E
+EAST DEVON,East Devon,E
+EAST HAMPSHIRE,East Hampshire,E
+EAST HERTFORDSHIRE,East Hertfordshire,E
+EAST LINDSEY,East Lindsey,E
+EAST RIDING OF YORKSHIRE,East Riding of Yorkshire,E
+EAST STAFFORDSHIRE,East Staffordshire,E
+EAST SUFFOLK,East Suffolk,E
+EASTBOURNE,Eastbourne,E
+EASTLEIGH,Eastleigh,E
+EDEN,Westmorland and Furness,E
+ELLESMERE PORT AND NESTON,Cheshire West and Chester,E
+ELMBRIDGE,Elmbridge,E
+ENFIELD,Enfield,E
+EPPING FOREST,Epping Forest,E
+EPSOM AND EWELL,Epsom and Ewell,E
+EREWASH,Erewash,E
+EXETER,Exeter,E
+FAREHAM,Fareham,E
+FENLAND,Fenland,E
+FLINTSHIRE,Flintshire,W
+FOLKESTONE AND HYTHE,Folkestone and Hythe,E
+FOREST HEATH,West Suffolk,E
+FOREST OF DEAN,Forest of Dean,E
+FYLDE,Fylde,E
+GATESHEAD,Gateshead,E
+GEDLING,Gedling,E
+GLANFORD,North Lincolnshire,E
+GLOUCESTER,Gloucester,E
+GOSPORT,Gosport,E
+GRAVESHAM,Gravesham,E
+GREAT YARMOUTH,Great Yarmouth,E
+GREENWICH,Greenwich,E
+GUILDFORD,Guildford,E
+GWENT,Blaenau Gwent,W
+GWYNEDD,Gwynedd,W
+HACKNEY,Hackney,E
+HALTON,Halton,E
+HAMMERSMITH AND FULHAM,Hammersmith and Fulham,E
+HARBOROUGH,Harborough,E
+HARINGEY,Haringey,E
+HARLOW,Harlow,E
+HARROW,Harrow,E
+HART,Hart,E
+HARTLEPOOL,Hartlepool,E
+HASTINGS,Hastings,E
+HAVANT,Havant,E
+HAVERING,Havering,E
+HEREFORDSHIRE,"Herefordshire, County of",E
+HERTSMERE,Hertsmere,E
+HIGH PEAK,High Peak,E
+HILLINGDON,Hillingdon,E
+HINCKLEY AND BOSWORTH,Hinckley and Bosworth,E
+HOLDERNESS,East Riding of Yorkshire,E
+HORSHAM,Horsham,E
+HOUNSLOW,Hounslow,E
+HOVE,Brighton and Hove,E
+HUNTINGDONSHIRE,Huntingdonshire,E
+HYNDBURN,Hyndburn,E
+IPSWICH,Ipswich,E
+ISLE OF ANGLESEY,Isle of Anglesey,W
+ISLE OF WIGHT,Isle of Wight,E
+ISLES OF SCILLY,Isles of Scilly,E
+ISLINGTON,Islington,E
+KENSINGTON AND CHELSEA,Kensington and Chelsea,E
+KETTERING,North Northamptonshire,E
+KING'S LYNN AND WEST NORFOLK,King's Lynn and West Norfolk,E
+KINGSTON UPON HULL,"Kingston upon Hull, City of",E
+KINGSTON UPON THAMES,Kingston upon Thames,E
+KIRKLEES,Kirklees,E
+KNOWSLEY,Knowsley,E
+LAMBETH,Lambeth,E
+LANCASTER,Lancaster,E
+LEEDS,Leeds,E
+LEICESTER,Leicester,E
+LEOMINSTER,"Herefordshire, County of",E
+LEWES,Lewes,E
+LEWISHAM,Lewisham,E
+LICHFIELD,Lichfield,E
+LINCOLN,Lincoln,E
+LIVERPOOL,Liverpool,E
+LUTON,Luton,E
+MACCLESFIELD,Cheshire East,E
+MAIDSTONE,Maidstone,E
+MALDON,Maldon,E
+MALVERN HILLS,Malvern Hills,E
+MANCHESTER,Manchester,E
+MANSFIELD,Mansfield,E
+MEDWAY,Medway,E
+MELTON,Melton,E
+MERTHYR TYDFIL,Merthyr Tydfil,W
+MERTON,Merton,E
+MID DEVON,Mid Devon,E
+MID SUFFOLK,Mid Suffolk,E
+MID SUSSEX,Mid Sussex,E
+MIDDLESBROUGH,Middlesbrough,E
+MILTON KEYNES,Milton Keynes,E
+MOLE VALLEY,Mole Valley,E
+MONMOUTHSHIRE,Monmouthshire,W
+NEATH,Neath Port Talbot,W
+NEATH PORT TALBOT,Neath Port Talbot,W
+NEW FOREST,New Forest,E
+NEWARK AND SHERWOOD,Newark and Sherwood,E
+NEWBURY,West Berkshire,E
+NEWCASTLE UPON TYNE,Newcastle upon Tyne,E
+NEWCASTLE-UNDER-LYME,Newcastle-under-Lyme,E
+NEWHAM,Newham,E
+NEWPORT,Newport,W
+NORTH DEVON,North Devon,E
+NORTH EAST DERBYSHIRE,North East Derbyshire,E
+NORTH EAST LINCOLNSHIRE,North East Lincolnshire,E
+NORTH HERTFORDSHIRE,North Hertfordshire,E
+NORTH KESTEVEN,North Kesteven,E
+NORTH LINCOLNSHIRE,North Lincolnshire,E
+NORTH NORFOLK,North Norfolk,E
+NORTH NORTHAMPTONSHIRE,North Northamptonshire,E
+NORTH SOMERSET,North Somerset,E
+NORTH TYNESIDE,North Tyneside,E
+NORTH WARWICKSHIRE,North Warwickshire,E
+NORTH WEST LEICESTERSHIRE,North West Leicestershire,E
+NORTH YORKSHIRE,North Yorkshire,E
+NORTHAMPTON,West Northamptonshire,E
+NORTHUMBERLAND,Northumberland,E
+NORWICH,Norwich,E
+NOTTINGHAM,Nottingham,E
+NUNEATON AND BEDWORTH,Nuneaton and Bedworth,E
+OADBY AND WIGSTON,Oadby and Wigston,E
+OLDHAM,Oldham,E
+OXFORD,Oxford,E
+PEMBROKESHIRE,Pembrokeshire,W
+PENDLE,Pendle,E
+PETERBOROUGH,Peterborough,E
+PLYMOUTH,Plymouth,E
+POOLE,"Bournemouth, Christchurch and Poole",E
+PORTSMOUTH,Portsmouth,E
+POWYS,Powys,W
+PRESELI PEMBROKESHIRE,Pembrokeshire,W
+PRESTON,Preston,E
+READING,Reading,E
+REDBRIDGE,Redbridge,E
+REDCAR AND CLEVELAND,Redcar and Cleveland,E
+REDDITCH,Redditch,E
+REIGATE AND BANSTEAD,Reigate and Banstead,E
+RHONDDA CYNON TAFF,Rhondda Cynon Taf,W
+RIBBLE VALLEY,Ribble Valley,E
+RICHMOND UPON THAMES,Richmond upon Thames,E
+ROCHDALE,Rochdale,E
+ROCHESTER UPON MEDWAY,Medway,E
+ROCHFORD,Rochford,E
+ROSSENDALE,Rossendale,E
+ROTHER,Rother,E
+ROTHERHAM,Rotherham,E
+RUGBY,Rugby,E
+RUNNYMEDE,Runnymede,E
+RUSHCLIFFE,Rushcliffe,E
+RUSHMOOR,Rushmoor,E
+RUTLAND,Rutland,E
+SALFORD,Salford,E
+SANDWELL,Sandwell,E
+SEFTON,Sefton,E
+SEVENOAKS,Sevenoaks,E
+SHEFFIELD,Sheffield,E
+SHEPWAY,Folkestone and Hythe,E
+SHROPSHIRE,Shropshire,E
+SLOUGH,Slough,E
+SOLIHULL,Solihull,E
+SOMERSET,Somerset,E
+SOUTH BEDFORDSHIRE,Central Bedfordshire,E
+SOUTH CAMBRIDGESHIRE,South Cambridgeshire,E
+SOUTH DERBYSHIRE,South Derbyshire,E
+SOUTH GLOUCESTERSHIRE,South Gloucestershire,E
+SOUTH HAMS,South Hams,E
+SOUTH HEREFORDSHIRE,"Herefordshire, County of",E
+SOUTH HOLLAND,South Holland,E
+SOUTH KESTEVEN,South Kesteven,E
+SOUTH LAKELAND,Westmorland and Furness,E
+SOUTH NORFOLK,South Norfolk,E
+SOUTH OXFORDSHIRE,South Oxfordshire,E
+SOUTH PEMBROKESHIRE,Pembrokeshire,W
+SOUTH RIBBLE,South Ribble,E
+SOUTH STAFFORDSHIRE,South Staffordshire,E
+SOUTH TYNESIDE,South Tyneside,E
+SOUTHAMPTON,Southampton,E
+SOUTHEND-ON-SEA,Southend-on-Sea,E
+SOUTHWARK,Southwark,E
+SPELTHORNE,Spelthorne,E
+ST ALBANS,St Albans,E
+ST EDMUNDSBURY,West Suffolk,E
+ST HELENS,St. Helens,E
+STAFFORD,Stafford,E
+STAFFORDSHIRE MOORLANDS,Staffordshire Moorlands,E
+STEVENAGE,Stevenage,E
+STOCKPORT,Stockport,E
+STOCKTON-ON-TEES,Stockton-on-Tees,E
+STOKE-ON-TRENT,Stoke-on-Trent,E
+STRATFORD-ON-AVON,Stratford-on-Avon,E
+STROUD,Stroud,E
+SUNDERLAND,Sunderland,E
+SURREY HEATH,Surrey Heath,E
+SUTTON,Sutton,E
+SWALE,Swale,E
+SWANSEA,Swansea,W
+SWINDON,Swindon,E
+TAMESIDE,Tameside,E
+TAMWORTH,Tamworth,E
+TANDRIDGE,Tandridge,E
+TEIGNBRIDGE,Teignbridge,E
+TENDRING,Tendring,E
+TEST VALLEY,Test Valley,E
+TEWKESBURY,Tewkesbury,E
+THAMESDOWN,Swindon,E
+THANET,Thanet,E
+THE EAST YORKSHIRE BOROUGH OF BEVERLEY,East Riding of Yorkshire,E
+THE VALE OF GLAMORGAN,Vale of Glamorgan,W
+THREE RIVERS,Three Rivers,E
+THURROCK,Thurrock,E
+TONBRIDGE AND MALLING,Tonbridge and Malling,E
+TORBAY,Torbay,E
+TORFAEN,Torfaen,W
+TORRIDGE,Torridge,E
+TOWER HAMLETS,Tower Hamlets,E
+TRAFFORD,Trafford,E
+TUNBRIDGE WELLS,Tunbridge Wells,E
+UTTLESFORD,Uttlesford,E
+VALE OF GLAMORGAN,Vale of Glamorgan,W
+VALE OF WHITE HORSE,Vale of White Horse,E
+VALE ROYAL,Cheshire West and Chester,E
+WAKEFIELD,Wakefield,E
+WALSALL,Walsall,E
+WALTHAM FOREST,Waltham Forest,E
+WANDSWORTH,Wandsworth,E
+WANSDYKE,Bath and North East Somerset,E
+WARRINGTON,Warrington,E
+WARWICK,Warwick,E
+WATFORD,Watford,E
+WAVENEY,East Suffolk,E
+WAVERLEY,Waverley,E
+WEALDEN,Wealden,E
+WELLINGBOROUGH,North Northamptonshire,E
+WELWYN HATFIELD,Welwyn Hatfield,E
+WEST BERKSHIRE,West Berkshire,E
+WEST DEVON,West Devon,E
+WEST LANCASHIRE,West Lancashire,E
+WEST LINDSEY,West Lindsey,E
+WEST NORTHAMPTONSHIRE,West Northamptonshire,E
+WEST OXFORDSHIRE,West Oxfordshire,E
+WEST SUFFOLK,West Suffolk,E
+WESTMORLAND AND FURNESS,Westmorland and Furness,E
+WIGAN,Wigan,E
+WILTSHIRE,Wiltshire,E
+WINCHESTER,Winchester,E
+WINDSOR AND MAIDENHEAD,Windsor and Maidenhead,E
+WIRRAL,Wirral,E
+WOKING,Woking,E
+WOKINGHAM,Wokingham,E
+WOLVERHAMPTON,Wolverhampton,E
+WOODSPRING,North Somerset,E
+WORCESTER,Worcester,E
+WORTHING,Worthing,E
+WREKIN,Telford and Wrekin,E
+WREXHAM,Wrexham,W
+WYCHAVON,Wychavon,E
+WYRE,Wyre,E
+WYRE FOREST,Wyre Forest,E
+YORK,York,E
