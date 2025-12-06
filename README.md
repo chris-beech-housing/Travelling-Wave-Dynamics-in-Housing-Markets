@@ -11,15 +11,15 @@ This [working paper](https://github.com/chris-beech-housing/Travelling-Wave-Dyna
 Abstract
 --------
 
-We analyse England and Wales transactional house price data to describe a robust, empirical regularity across two cycles: a systematic progression of ranked annual returns. It is shown that an analysis by Local Authority may seem intuitive, but an analysis by quantile, a change of the coordinates of the system, best describes how information propagates through housing markets.
+We analyse England and Wales transactional house price data to describe a robust, empirical regularity across two cycles: a systematic progression of ranked annual returns. We demonstrate that whilst a geographical analysis by Local Authority appears intuitive, an analysis by quantile provides a superior description of information propagation through housing markets.
 
-This travelling wave pattern, independent of the underlying house price growth, is not only a data-driven version of Ricardo’s Law of Rent but also a leading indicator of house market crashes.
+This travelling wave pattern, independent of the underlying house price growth, is both a data-driven version of Ricardo’s Law of Rent and a leading indicator of house market crashes.
 
-A simple model is proposed: the log-logistic distribution of house prices is subject to drift and diﬀusion; a constant-speed travelling wave ensures that over time the fastest-growing quantile travels from the highest to the lowest in order; when the travelling wave reaches the lowest quantile or margin, there is a crash in house prices. The trough is reached when the land value at the margin is again worth zero; subsequently, the cycle restarts.
+We propose a simple model where the log-logistic distribution of house prices is subject to drift and diffusion. In addition, a constant-speed travelling wave ensures that over time the fastest-growing quantile travels from the highest to the lowest in order. When the travelling wave reaches the lowest quantile or margin, there is a crash in house prices. The trough is reached when the land value at the margin is again worth zero; subsequently, the cycle restarts.
 
 The benefits of a land value tax are briefly discussed.
 
-The analysis makes testable statements not only about the future but also about other countries’ (non-public) national housing datasets.
+The analysis makes testable statements not only about the future but also about other countries’ national housing datasets.
 
 Overview of the code
 --------------------
