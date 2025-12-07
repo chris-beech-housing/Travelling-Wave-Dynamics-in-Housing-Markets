@@ -21,6 +21,21 @@ The benefits of a land value tax are briefly discussed.
 
 The analysis makes testable statements not only about the future but also about other countries’ national housing datasets.
 
+Google NotebookLM podcast
+-------------------------
+
+For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/releases/download/audio-v1.0.0/Travelling.Wave.Dynamics.in.Housing.Markets.NotebookLM.m4a) version of a slightly earlier version of the paper.
+
+Be aware that:
+
+* It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which is only a footnote in my paper but a fair journalistic opening.
+* It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
+* The Local Authorities are not as noisy as it suggests.
+* It mentions 'inflation', which is not a term I use at all.
+* It references the Knoll et al. paper on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
+
+Other than that, it's not bad at all (English understatement), quite amazing really.
+
 Overview of the code
 --------------------
 
