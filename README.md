@@ -21,6 +21,34 @@ The benefits of a land value tax are briefly discussed.
 
 The analysis makes testable statements not only about the future but also about other countries’ national housing datasets.
 
+Two minute summary
+------------------
+
+Had I not read Martin’s Wolf’s 2010 Financial Times column, ["Why we must halt the land cycle"](https://www.youtube.com/watch?v=g5kc9RepC1Q), which referenced the work of [Fred Harrison](https://www.amazon.co.uk/Boom-Bust-Prices-Banking-Depression-ebook/dp/B008M0QJIM/) on the 18-year land cycle, this work may never have existed.
+
+Although there are many plots in the paper, this one best captures the core idea:
+<img width="1200" height="872" alt="overview heatmaps" src="https://github.com/user-attachments/assets/064c00ac-6efe-48f7-924e-c0c91f45555a"/>
+
+The above heat maps are by decile, the highest median price is at the top, the lowest median price is at the bottom.
+
+The top heat map shows the 'Moving average of the annual log return of the monthly median using a [price per square metre dataset](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre), by decile'. Simply, this is the change in house prices over time; the great financial crash is very clear in blue.
+
+The bottom heat map shows the 'Rank of the moving average of the annual return of the monthly median using the price per square metre dataset, by decile'. The rank allows us to visualise the change in house prices independently of the underlying house price growth, i.e. independently of interest rates and credit conditions.
+
+In the rank plot, the fastest growing (or lowest falling) deciles are in dark red, and the slowest growing (or highest falling) deciles are in dark blue.
+
+Even the most casual observer will notice the reverse S-curves traced by the dark red, over two separate house price cycles. The rate of progress is very similar in both cases. I define these patterns as travelling waves.
+
+Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the deciles so neat and tidy.
+
+These travelling waves follow the empirical cumulative distribution functions of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. Markets are very efficient in this respect.
+
+It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the "winner’s curse" phase.
+
+In the second cycle, there is no impact on the travelling wave from Brexit, but it is interrupted due to the pandemic: the so-called "race for space".
+
+In the paper, I argue that the travelling wave is both a data-driven version of Ricardo’s Law of Rent and a leading indicator of house price crashes. When combined with the 18-year cycle observed by Fred Harrison, the current location of the travelling wave suggests a crash in 2026-27.
+
 Google NotebookLM podcast
 -------------------------
 
@@ -32,7 +60,7 @@ Be aware that:
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities are not as noisy as it suggests.
 * It mentions 'inflation', which is not a term I use at all.
-* It references the Knoll et al. paper on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
+* It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
 
 Other than that, it's not bad at all (English understatement), quite amazing really.
 
@@ -49,7 +77,7 @@ The price per square metre dataset should be created using code from this reposi
 
 '5a. Local Authority maps' requires data from '5. Local Authority analysis'.
 
-'5 and 8 subplots' requires creating plots from '5. Local Authority analysis' and '8. Quantile analysis' and then combining them with this script.
+'5. and 8. subplots' requires creating plots from '5. Local Authority analysis' and '8. Quantile analysis' and then combining them with this script.
 
 The 'Data' folder contains the Stamp Duty rates, a compilation of the Help to Buy data, and 'Mappings for missing Local Authority'. All other datasets should be placed in this folder.
 
