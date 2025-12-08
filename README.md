@@ -52,7 +52,7 @@ In the paper, I argue that the travelling wave is both a data-driven version of 
 Google NotebookLM podcast
 -------------------------
 
-For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/releases/download/audio-v1.0.0/Travelling.Wave.Dynamics.in.Housing.Markets.NotebookLM.m4a) version of a slightly earlier version of the paper.
+For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/releases/download/code-paper-podcast-v1.0/Travelling.Wave.Dynamics.in.Housing.Markets.NotebookLM.m4a) version of a slightly earlier version of the paper.
 
 Be aware that:
 
