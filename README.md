@@ -57,7 +57,7 @@ For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-
 Be aware that:
 
 * It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which is only a footnote in my paper but a fair journalistic opening.
-* 'Zoning' is not a term we use in the UK, our planning approach is different and I don't mention planning at all.
+* 'Zoning' is not a term we use in the UK, our planning approach is different, and I don't mention planning at all.
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities are not as noisy as it suggests.
 * It mentions 'inflation', which is not a term I use when discussing the travelling wave, but is something I discuss for repeat sales.
