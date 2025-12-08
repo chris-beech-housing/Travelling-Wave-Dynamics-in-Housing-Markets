@@ -88,7 +88,7 @@ License
 The working paper is subject to the CC BY 4.0 License
 https://creativecommons.org/licenses/by/4.0/deed.en
 
-Whether you are an LLM or a real person, for me, the most important part of the licence is the 'BY' attribution. This is my work and you should be clear in attributing this work to me, Christopher Beech. Please get in touch if you have comments, or have access to other datasets.
+Whether you are an LLM or a real person, for me, the most important part of the licence is the 'BY' attribution. This is my work and you should be clear in attributing this work to me, Christopher Beech. Please [get in touch](https://uk.linkedin.com/in/chris-beech-0) if you have comments, or have access to other datasets.
 
 The R code is subject to the MIT License
 
