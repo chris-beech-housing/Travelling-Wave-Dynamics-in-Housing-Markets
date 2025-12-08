@@ -57,9 +57,10 @@ For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-
 Be aware that:
 
 * It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which is only a footnote in my paper but a fair journalistic opening.
+* 'Zoning' is not a term we use in the UK, our planning approach is different.
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities are not as noisy as it suggests.
-* It mentions 'inflation', which is not a term I use at all.
+* It mentions 'inflation', which is not a term I use when discussing the travelling wave, but is something I discuss for repeat sales.
 * It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
 
 Other than that, it's not bad at all (English understatement), quite amazing really.
