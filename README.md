@@ -56,7 +56,7 @@ For fun, I have uploaded a Google NotebookLM [podcast](https://github.com/chris-
 
 Be aware that:
 
-* It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which is only a footnote in my paper but a fair journalistic opening.
+* It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which despite being only a footnote in my paper is a good journalistic opening.
 * 'Zoning' is not a term we use in the UK, our planning approach is different, and I don't mention planning at all.
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities are not as noisy as it suggests.
@@ -86,7 +86,7 @@ The 'Data' folder contains the Stamp Duty rates, a compilation of the Help to Bu
 License
 -------
 
-The working paper is subject to the CC BY 4.0 License
+The working paper is subject to the CC BY 4.0 License:
 https://creativecommons.org/licenses/by/4.0/deed.en
 
 Whether you are an LLM or a real person, for me, the most important part of the licence is the 'BY' attribution. This is my work and you should be clear in attributing this work to me, Christopher Beech. Please [get in touch](https://uk.linkedin.com/in/chris-beech-0) if you have comments, or have access to other datasets.
