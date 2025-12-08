@@ -41,7 +41,7 @@ Even the most casual observer will notice the reverse S-curves traced by the dar
 
 Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the deciles so neat and tidy.
 
-These travelling waves follow the empirical cumulative distribution functions of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. Markets are very efficient in this respect.
+These travelling waves follow the empirical cumulative distribution functions of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
 
 It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the "winner’s curse" phase.
 
