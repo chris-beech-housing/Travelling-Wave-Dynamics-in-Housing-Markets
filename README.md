@@ -24,14 +24,14 @@ The analysis makes testable statements not only about the future but also about 
 Two minute summary
 ------------------
 
-Had I not read Martin’s Wolf’s 2010 Financial Times column, ["Why we must halt the land cycle"](https://www.youtube.com/watch?v=g5kc9RepC1Q), which referenced the work of [Fred Harrison](https://www.amazon.co.uk/Boom-Bust-Prices-Banking-Depression-ebook/dp/B008M0QJIM/) on the 18-year land cycle, this work may never have existed.
+Had I not read Martin’s Wolf’s 2010 Financial Times column, [Why we must halt the land cycle](https://www.youtube.com/watch?v=g5kc9RepC1Q), which referenced the work of [Fred Harrison](https://www.amazon.co.uk/Boom-Bust-Prices-Banking-Depression-ebook/dp/B008M0QJIM/) on the 18-year land cycle, this work may never have existed.
 
 Although there are many plots in the paper, this one best captures the core idea:
 <img width="1200" height="872" alt="overview heatmaps" src="https://github.com/user-attachments/assets/064c00ac-6efe-48f7-924e-c0c91f45555a"/>
 
 The above heat maps are by decile, the highest median price is at the top, the lowest median price is at the bottom.
 
-The top heat map shows the 'Moving average of the annual log return of the monthly median using a [price per square metre dataset](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre), by decile'. Simply, this is the change in house prices over time; the great financial crash is very clear in blue.
+The top heat map shows the 'Moving average of the annual log return of the monthly median using a [price per square metre dataset](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre), by decile'. Simply, this is the change in house prices over time; the great financial crisis is very clear in blue.
 
 The bottom heat map shows the 'Rank of the moving average of the annual return of the monthly median using the price per square metre dataset, by decile'. The rank allows us to visualise the change in house prices independently of the underlying house price growth, i.e. independently of interest rates and credit conditions.
 
@@ -39,9 +39,9 @@ In the rank plot, the fastest growing (or lowest falling) deciles are in dark re
 
 Even the most casual observer will notice the reverse S-curves traced by the dark red, over two separate house price cycles. The rate of progress is very similar in both cases. I define these patterns as travelling waves.
 
-Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the deciles so neat and tidy.
+Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy.
 
-These travelling waves follow the empirical cumulative distribution functions of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
+These travelling waves follow the cumulative distribution function of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
 
 It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the "winner’s curse" phase.
 
@@ -59,7 +59,7 @@ Be aware that:
 * It starts with the anecdote of Queen Elizabeth II at the London School of Economics, which despite being only a footnote in my paper is a good journalistic opening.
 * 'Zoning' is not a term we use in the UK, our planning approach is different, and I don't mention planning at all.
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
-* The Local Authorities are not as noisy as it suggests.
+* The Local Authorities rank plots are not as noisy as it suggests, although the adjacency matrices are.
 * It mentions 'inflation', which is not a term I use when discussing the travelling wave, but is something I discuss for repeat sales.
 * It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
 
