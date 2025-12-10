@@ -61,7 +61,7 @@ Be aware that:
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities rank plots are not as noisy as it suggests, although the adjacency matrices are.
 * It mentions 'inflation', which is not a term I use when discussing the travelling wave, but is something I discuss for repeat sales.
-* It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
+* It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) on neoclassical economics, and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
 
 Other than that, it's not bad at all (English understatement), quite amazing really.
 
