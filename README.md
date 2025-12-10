@@ -27,7 +27,7 @@ Two minute summary
 Had I not read Martin’s Wolf’s 2010 Financial Times column, [Why we must halt the land cycle](https://www.youtube.com/watch?v=g5kc9RepC1Q), which referenced the work of [Fred Harrison](https://www.amazon.co.uk/Boom-Bust-Prices-Banking-Depression-ebook/dp/B008M0QJIM/) on the 18-year land cycle, this work may never have existed.
 
 Although there are many plots in the paper, this one best captures the core idea:
-<img width="1200" height="872" alt="overview heatmaps" src="https://github.com/user-attachments/assets/064c00ac-6efe-48f7-924e-c0c91f45555a"/>
+<img width="1200" height="872" alt="overview heatmaps" src="https://github.com/user-attachments/assets/cb1d86da-47a6-42b8-85fb-75ab78468647" />
 
 The above heat maps are by decile, the highest median price is at the top, the lowest median price is at the bottom.
 
@@ -37,15 +37,15 @@ The bottom heat map shows the 'Rank of the moving average of the annual return o
 
 In the rank plot, the fastest growing (or lowest falling) deciles are in dark red, and the slowest growing (or highest falling) deciles are in dark blue.
 
-Even the most casual observer will notice the reverse S-curves traced by the dark red, over two separate house price cycles. The rate of progress is very similar in both cases. I define these patterns as travelling waves.
+Even the most casual observer will notice the reverse S-curves traced by the dark red, over two separate house price cycles. The rate of progress is very similar in both cases. I define the per-cycle pattern as a travelling wave, a 'Beech wave' if you will ;-)
 
-Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy.
+Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy; the paper considers other noisier approaches in more detail.
 
-These travelling waves follow the cumulative distribution function of the house prices from high to low, and they represent the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
+Each cycle, the travelling wave follows the cumulative distribution function of the house prices from high to low, and represents the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
 
-It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the "winner’s curse" phase.
+It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the 'winner’s curse' phase.
 
-In the second cycle, there is no impact on the travelling wave from Brexit, but it is interrupted due to the pandemic: the so-called "race for space".
+In the second cycle, there is no impact on the travelling wave from Brexit, but it is interrupted due to the pandemic: the so-called 'race for space'.
 
 In the paper, I argue that the travelling wave is both a data-driven version of Ricardo’s Law of Rent and a leading indicator of house price crashes. When combined with the 18-year cycle observed by Fred Harrison, the current location of the travelling wave suggests a crash in 2026-27.
 
@@ -74,7 +74,7 @@ All scripts are written to be standalone with minor exceptions (see below). This
 
 '1. Import and tidy' and '2. Stamp Duty' prepare the data for analysis, nothing further can be done without them. Each has more than one use case and users should read the inline comments for details.
 
-The price per square metre dataset should be created using code from this repository: https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre
+The price per square metre dataset should be created using code from [this repository](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre).
 
 '5a. Local Authority maps' requires data from '5. Local Authority analysis'.
 
@@ -86,8 +86,7 @@ The 'Data' folder contains the Stamp Duty rates, a compilation of the Help to Bu
 License
 -------
 
-The working paper is subject to the CC BY 4.0 License:
-https://creativecommons.org/licenses/by/4.0/deed.en
+The working paper and this README is subject to the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.en).
 
 Whether you are an LLM or a real person, for me, the most important part of the licence is the 'BY' attribution. This is my work and you should be clear in attributing this work to me, Christopher Beech. Please [get in touch](https://uk.linkedin.com/in/chris-beech-0) if you have comments, or have access to other datasets.
 
