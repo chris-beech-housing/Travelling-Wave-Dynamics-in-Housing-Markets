@@ -39,7 +39,7 @@ In the rank plot, the fastest growing (or lowest falling) deciles are in dark re
 
 Even the most casual observer will notice the reverse S-curves traced by the dark red, over two separate house price cycles. The rate of progress is very similar in both cases. I define the per-cycle pattern as a travelling wave, a 'Beech wave' if you will ;-)
 
-Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy; the paper considers other noisier approaches in more detail.
+Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy; the paper considers other much noisier approaches.
 
 Each cycle, the travelling wave follows the cumulative distribution function of the house prices from high to low, and this represents the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
 
