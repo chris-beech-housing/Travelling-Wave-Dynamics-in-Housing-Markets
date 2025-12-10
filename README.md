@@ -78,7 +78,7 @@ The price per square metre dataset should be created using code from [this repos
 
 '5a. Local Authority maps' requires data from '5. Local Authority analysis'.
 
-'5. and 8. subplots' requires creating plots from '5. Local Authority analysis' and '8. Quantile analysis' and then combining them with this script.
+'5. and 8. subplots' requires creating plots from '5. Local Authority analysis' and '8. Quantile analysis' to combine.
 
 The 'Data' folder contains the Stamp Duty rates, a compilation of the Help to Buy data, and 'Mappings for missing Local Authority'. All other datasets should be placed in this folder.
 
