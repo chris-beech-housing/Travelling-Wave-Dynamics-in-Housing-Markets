@@ -41,7 +41,7 @@ Even the most casual observer will notice the reverse S-curves traced by the dar
 
 Note that the travelling wave ranks are particularly clean (systematically ordered from ranks one to ten) in both vertical and horizontal dimensions. Only with the price per square metre dataset are the ranks so neat and tidy; the paper considers other noisier approaches in more detail.
 
-Each cycle, the travelling wave follows the cumulative distribution function of the house prices from high to low, and represents the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
+Each cycle, the travelling wave follows the cumulative distribution function of the house prices from high to low, and this represents the propagation of information down through the distribution, that is, through the market. The market is very efficient in this respect.
 
 It is noticeable that the travelling wave reaches the decile with the lowest median price prior to 2008. However, the richest areas subsequently saw the fastest growth immediately prior. This may have been due to foreign buyers in London, or what Fred Harrison calls the 'winner’s curse' phase.
 
@@ -60,8 +60,8 @@ Be aware that:
 * 'Zoning' is not a term we use in the UK, our planning approach is different, and I don't mention planning at all.
 * It initially doesn't distinguish enough between the price heatmaps and the rank heatmaps, but gets it right later on.
 * The Local Authorities rank plots are not as noisy as it suggests, although the adjacency matrices are.
-* It mentions 'inflation', which is not a term I use when discussing the travelling wave, but is something I discuss for repeat sales.
-* It indirectly references [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) on neoclassical economics, and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
+* It mentions 'inflation', which is not a term I use when discussing price or the travelling wave, but is something I discuss for repeat sales.
+* It talks about my references to [Rethinking the Economics of Land and Housing](https://www.amazon.co.uk/Rethinking-Economics-Land-Housing-Ryan-Collins/dp/135037427X/) on neoclassical economics' lack of land, and the [Knoll et al. paper](https://www.aeaweb.org/articles?id=10.1257/aer.20150501) on land accounting for 80% of the global house price boom since WWII, but makes it sound like it's my research.
 
 Other than that, it's not bad at all (English understatement), quite amazing really.
 
