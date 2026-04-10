@@ -1,6 +1,5 @@
 # Re-start R session to ensure only the necessary libraries are attached
 library(tidyverse)
-library(janitor)
 library(ggrepel)
 
 options(scipen = 100)
@@ -9,164 +8,197 @@ setwd("/Users/chrisbeech/Documents/UK housing analysis")
 
 ## Import data
 
+# Repeat sales file; the sales that we are interested in are below the lowest Stamp Duty threshold so we can export from 1. Match to geographies
+# price_paid_data |>
+#   mutate(Date = floor_date(`Date of Transfer`, "month")) |>
+#   group_by(Date) |>
+#   mutate(quantile = ntile(Price, 317)) |>
+#   ungroup() |>
+#   filter(quantile <= 10) |> # filter for sales at the margin
+#   select(
+#     `Date of Transfer`,
+#     Date,
+#     Postcode,
+#     PAON,
+#     SAON,
+#     Street,
+#     `Local Authority`,
+#     Price,
+#     quantile
+#   ) |>
+#   group_by(Postcode, PAON, SAON, Street) |>
+#   filter(n() > 1) |>
+#   ungroup() |>
+#   write_csv("Data/pp-repeat.csv")
+
+end_year <- 2009
+
+repeat_sales <-
+  read_csv("Data/pp-repeat.csv") |>
+  mutate(year = year(`Date of Transfer`)) |>
+  filter(year < end_year + 1)
+
 # CPI data: https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23
 cpi <-
   read_csv("Data/series-201125.csv") |>
   rename(Date = Title, Index = `CPI INDEX 00: ALL ITEMS 2015=100`) |>
-  filter(str_detect(
-    Date,
-    c("JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC")
-  )) |>
+  filter(str_detect(Date, "JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC")) |>
   mutate(
     Date = floor_date(as_date(ym(Date)), "month"),
     Index = as.numeric(Index)
   )
 
-# Price paid data pre-filtered for at least one repeat sale
-price_paid_data <-
-  read_csv("Data/pp-repeat.csv")
-
-## Pairs of repeat sales
-
-# Process repeat sales for a specific pair of years
-analyse_pair_repeat_sales <- function(data, year1, year2, cpi = NULL) {
-  # Select only properties with sales in both specified years
-  result <- data |>
-    filter(year(`Date of Transfer`) %in% c(year1, year2)) |>
-    group_by(Postcode, PAON, SAON, Street) |>
-    filter(n_distinct(year(`Date of Transfer`)) == 2) |> # Must have sales in both years
-    summarise(
-      # First sale (year1)
-      date_first = first(`Date of Transfer`[year(`Date of Transfer`) == year1]), # this approach only takes the first sale in a given year
-      price_first = first(Price[year(`Date of Transfer`) == year1]),
-      quantile_first = first(quantile[year(`Date of Transfer`) == year1]),
-
-      # Second sale (year2)
-      date_second = first(`Date of Transfer`[
-        year(`Date of Transfer`) == year2
-      ]), # this approach only takes the first sale in a given year
-      price_second = first(Price[year(`Date of Transfer`) == year2]),
-      quantile_second = first(quantile[year(`Date of Transfer`) == year2]),
-
-      # Keep Local Authority
-      `Local Authority` = first(`Local Authority`),
-
-      .groups = "drop"
-    ) |>
-    mutate(
-      # Add year information
-      year_first = year1,
-      year_second = year2,
-      year_pair = paste0(year1, "-", year2),
-
-      # Calculate price ratio
-      price_ratio = price_second / price_first
-    )
-
-  # Add CPI calculations if CPI data is provided
-  result <- result |>
-    mutate(
-      # Get CPI values at the dates of sales
-      cpi_first = approx(
-        cpi$Date,
-        cpi$Index,
-        xout = date_first,
-        rule = 2
-      )$y,
-      cpi_second = approx(
-        cpi$Date,
-        cpi$Index,
-        xout = date_second,
-        rule = 2
-      )$y,
-
-      # Calculate CPI multiplier
-      cpi_multiplier = cpi_second / cpi_first,
-
-      # Calculate CPI-adjusted price and differences
-      cpi_adjusted_price = price_first * cpi_multiplier,
-      difference_from_cpi = price_second - cpi_adjusted_price,
-      percent_difference = (price_second / cpi_adjusted_price - 1) * 100
-    )
-
-  return(result)
+# Helper: interpolate CPI index at a given date vector
+cpi_at <- function(dates) {
+  approx(cpi$Date, cpi$Index, xout = dates, rule = 2)$y
 }
 
-# Function to generate and process all year combinations
-generate_pair_combinations <- function(
-  data,
-  start_year = 1995,
-  end_year = 2025,
-  cpi = cpi
-) {
-  # Generate all possible year combinations
-  years <- start_year:end_year
-  combinations <- expand.grid(year1 = years, year2 = years)
+## Anchor pairs and intermediate sales
 
-  # Keep only combinations where year2 > year1
-  combinations <- combinations[combinations$year2 > combinations$year1, ]
+sales_prior_to <- 2006
 
-  # Initialise empty list to store results
-  results_list <- list()
-
-  # Process each combination
-  for (i in 1:nrow(combinations)) {
-    year1 <- combinations$year1[i]
-    year2 <- combinations$year2[i]
-
-    # Calculate and store result
-    cat("Processing years:", year1, "to", year2, "\n")
-    result <- analyse_pair_repeat_sales(data, year1, year2, cpi)
-
-    if (!is.null(result) && nrow(result) > 0) {
-      results_list[[paste0(year1, "_", year2)]] <- result
-    }
-  }
-
-  # Combine all results
-  if (length(results_list) > 0) {
-    combined_results <- bind_rows(results_list)
-    return(combined_results)
-  } else {
-    cat("No valid results found for any year combination.\n")
-    return(NULL)
-  }
-}
-
-# Generate and process all year combinations
-all_repeat_sales <-
-  generate_pair_combinations(
-    price_paid_data |> filter(quantile <= 10), # Filter based on quantile for quicker analysis
-    start_year = 1995,
-    end_year = 2025,
-    cpi = cpi
+# Anchor pairs: every pre-sales_prior_to sale paired with the end_year sale, per property
+anchors <-
+  repeat_sales |>
+  group_by(`Local Authority`, Postcode, PAON, SAON, Street) |>
+  filter(any(year == end_year) & any(year < sales_prior_to)) |>
+  reframe(
+    year_first = year[year < sales_prior_to],
+    date_first = `Date of Transfer`[year < sales_prior_to],
+    price_first = Price[year < sales_prior_to],
+    quantile_first = quantile[year < sales_prior_to],
+    date_2009 = first(`Date of Transfer`[year == end_year]),
+    price_2009 = first(Price[year == end_year]),
+    quantile_2009 = first(quantile[year == end_year])
+  ) |>
+  mutate(
+    cpi_first = cpi_at(date_first),
+    cpi_2009 = cpi_at(date_2009),
+    cpi_multiplier = cpi_2009 / cpi_first,
+    cpi_adjusted_price = price_first * cpi_multiplier,
+    percent_difference = (price_2009 / cpi_adjusted_price - 1) * 100
+  ) |>
+  filter(
+    abs(quantile_first - quantile_2009) <= 2,
+    abs(percent_difference) <= 5,
+    price_2009 <= 45000
   )
 
-# Repeat sales sold in 2009
-pair_sales_in_2009 <-
-  all_repeat_sales |>
-  filter(quantile_first <= 5) |>
-  filter(abs(quantile_first - quantile_second) <= 4) |>
-  filter(abs(percent_difference) <= 5) |>
-  filter(year_first < 2006 & year_second == 2009) |>
-  arrange(price_second) |>
-  select(-c(Postcode, PAON, SAON, Street)) |>
-  select(`Local Authority`, everything())
+# Intermediate sales
+intermediates <-
+  repeat_sales |>
+  semi_join(
+    anchors,
+    by = c("Local Authority", "Postcode", "PAON", "SAON", "Street")
+  ) |>
+  inner_join(
+    anchors |>
+      select(
+        `Local Authority`,
+        Postcode,
+        PAON,
+        SAON,
+        Street,
+        year_first,
+        price_first,
+        price_2009,
+        cpi_adjusted_price
+      ),
+    by = c("Local Authority", "Postcode", "PAON", "SAON", "Street"),
+    relationship = "many-to-many"
+  ) |>
+  filter(year > year_first, year < end_year) |>
+  select(
+    `Local Authority`,
+    Postcode,
+    PAON,
+    SAON,
+    Street,
+    cpi_adjusted_price,
+    year_second = year,
+    price_second = Price
+  )
 
-# Plot data
-pair_sales_in_2009 |>
-  ggplot(aes(x = cpi_adjusted_price, y = price_second)) +
+## Plot data
+
+# Labels on anchors: suppress duplicates at the same plotted position
+repeat_sales_plot <-
+  anchors |>
+  group_by(`Local Authority`, Postcode, PAON, SAON, Street) |>
+  mutate(
+    label_first = if_else(
+      !duplicated(paste(
+        year_first,
+        round(cpi_adjusted_price),
+        round(price_2009)
+      )),
+      as.character(year_first),
+      NA_character_
+    )
+  ) |>
+  ungroup()
+
+# Labels on intermediates: suppress duplicate year labels at the same position
+intermediates_plot <-
+  intermediates |>
+  left_join(
+    anchors |>
+      select(`Local Authority`, Postcode, PAON, SAON, Street, price_2009),
+    by = c("Local Authority", "Postcode", "PAON", "SAON", "Street"),
+    relationship = "many-to-many"
+  ) |>
+  group_by(`Local Authority`, Postcode, PAON, SAON, Street) |>
+  mutate(
+    label_second = if_else(
+      !duplicated(paste(
+        year_second,
+        round(cpi_adjusted_price),
+        round(price_second)
+      )),
+      as.character(year_second),
+      NA_character_
+    )
+  ) |>
+  ungroup()
+
+# Showing the full intermediate sale history as context
+repeat_sales_plot |>
+  ggplot(aes(x = cpi_adjusted_price, y = price_2009)) +
   geom_abline(
-    slope = 1, # Reference line where CPI-adjusted price equals 2009 price
+    slope = 1,
     intercept = 0,
     linetype = "dashed",
     colour = "#AFAFAF"
   ) +
-  geom_point(aes(colour = percent_difference)) +
+  geom_segment(
+    data = intermediates_plot,
+    aes(xend = cpi_adjusted_price, yend = price_second),
+    linewidth = 0.5,
+    alpha = 0.4,
+    linetype = "solid"
+  ) +
+  geom_point(
+    data = intermediates_plot,
+    aes(y = price_second),
+    shape = 1,
+    size = 2.5,
+    colour = "#888888",
+    alpha = 0.6
+  ) +
+  geom_point(aes(colour = percent_difference), size = 3) +
   geom_text_repel(
-    data = pair_sales_in_2009,
-    aes(x = cpi_adjusted_price, y = price_second, label = year_first),
-    size = 3
+    aes(label = label_first),
+    size = 3,
+    nudge_x = 200,
+    nudge_y = 150,
+    na.rm = TRUE
+  ) +
+  geom_label_repel(
+    data = intermediates_plot,
+    aes(y = price_second, label = label_second),
+    size = 3,
+    nudge_x = 600,
+    na.rm = TRUE
   ) +
   scale_colour_gradient(
     low = "#00B0F6",
@@ -177,216 +209,9 @@ pair_sales_in_2009 |>
   scale_x_continuous(labels = scales::label_comma()) +
   scale_y_continuous(labels = scales::label_comma()) +
   labs(
-    # title = "Repeat sales: sales prior to 2006 CPI-adjusted to 2009 versus 2009 sales prices",
-    x = "Sales price adjusted by CPI to 2009 (£)",
-    y = "2009 sales price (£)",
-    colour = "Percentage difference from CPI-adjusted sales price"
-  ) +
-  theme_minimal() +
-  theme(
-    legend.position = "bottom",
-    legend.direction = "horizontal",
-    legend.box = "horizontal"
-  ) +
-  guides(colour = guide_legend(nrow = 1))
-
-## Triplets of repeat sales
-
-# Process repeat sales for a specific trio of years
-analyse_triple_repeat_sales <- function(data, year1, year2, year3, cpi = NULL) {
-  # Select only properties with sales in all three specified years
-  result <- data |>
-    filter(year(`Date of Transfer`) %in% c(year1, year2, year3)) |>
-    group_by(Postcode, PAON, SAON, Street) |>
-    filter(n_distinct(year(`Date of Transfer`)) == 3) |> # Must have sales in all three years
-    summarise(
-      # First sale (year1)
-      date_first = first(`Date of Transfer`[year(`Date of Transfer`) == year1]), # this approach only takes the first sale in a given year
-      price_first = first(Price[year(`Date of Transfer`) == year1]),
-      quantile_first = first(quantile[year(`Date of Transfer`) == year1]),
-
-      # Second sale (year2)
-      date_second = first(`Date of Transfer`[
-        year(`Date of Transfer`) == year2
-      ]), # this approach only takes the first sale in a given year
-      price_second = first(Price[year(`Date of Transfer`) == year2]),
-      quantile_second = first(quantile[year(`Date of Transfer`) == year2]),
-
-      # Third sale (year3)
-      date_third = first(`Date of Transfer`[year(`Date of Transfer`) == year3]), # this approach only takes the first sale in a given year
-      price_third = first(Price[year(`Date of Transfer`) == year3]),
-      quantile_third = first(quantile[year(`Date of Transfer`) == year3]),
-
-      # Keep Local Authority
-      `Local Authority` = first(`Local Authority`),
-
-      .groups = "drop"
-    ) |>
-    mutate(
-      # Add year information
-      year_first = year1,
-      year_second = year2,
-      year_third = year3,
-      year_trio = paste0(year1, "-", year2, "-", year3),
-      year_label = paste0(year1, "-", year2),
-
-      # Calculate price ratios
-      price_ratio_1_2 = price_second / price_first,
-      price_ratio_2_3 = price_third / price_second,
-      price_ratio_1_3 = price_third / price_first,
-    )
-
-  # Add CPI calculations if CPI data is provided
-  if (!is.null(cpi)) {
-    result <- result |>
-      mutate(
-        # Get CPI values at the dates of sales
-        cpi_first = approx(
-          cpi$Date,
-          cpi$Index,
-          xout = date_first,
-          rule = 2
-        )$y,
-        cpi_second = approx(
-          cpi$Date,
-          cpi$Index,
-          xout = date_second,
-          rule = 2
-        )$y,
-        cpi_third = approx(
-          cpi$Date,
-          cpi$Index,
-          xout = date_third,
-          rule = 2
-        )$y,
-
-        # Calculate CPI multipliers
-        cpi_multiplier_1_2 = cpi_second / cpi_first,
-        cpi_multiplier_2_3 = cpi_third / cpi_second,
-        cpi_multiplier_1_3 = cpi_third / cpi_first,
-
-        # Calculate CPI-adjusted prices and differences
-        # First to second period
-        cpi_adjusted_price_1_2 = price_first * cpi_multiplier_1_2,
-        difference_from_cpi_1_2 = price_second - cpi_adjusted_price_1_2,
-        percent_difference_1_2 = (price_second / cpi_adjusted_price_1_2 - 1) *
-          100,
-
-        # Second to third period
-        cpi_adjusted_price_2_3 = price_second * cpi_multiplier_2_3,
-        difference_from_cpi_2_3 = price_third - cpi_adjusted_price_2_3,
-        percent_difference_2_3 = (price_third / cpi_adjusted_price_2_3 - 1) *
-          100,
-
-        # First to third period (overall)
-        cpi_adjusted_price_1_3 = price_first * cpi_multiplier_1_3,
-        difference_from_cpi_1_3 = price_third - cpi_adjusted_price_1_3,
-        percent_difference_1_3 = (price_third / cpi_adjusted_price_1_3 - 1) *
-          100
-      )
-  }
-
-  return(result)
-}
-
-# Function to generate all possible year triplets
-generate_triplet_combinations <- function(
-  data,
-  start_year = 1995,
-  end_year = 2009,
-  cpi = NULL
-) {
-  # Generate all possible year triplets
-  years <- start_year:end_year
-  year_triplets <- expand.grid(year1 = years, year2 = years, year3 = years)
-
-  # Keep only combinations where year1 < year2 < year3 and with minimum gaps
-  year_triplets <- year_triplets[
-    year_triplets$year1 < year_triplets$year2 &
-      year_triplets$year2 < year_triplets$year3,
-  ]
-
-  # Initialise empty list to store results
-  results_list <- list()
-
-  # Process each combination
-  for (i in 1:nrow(year_triplets)) {
-    year1 <- year_triplets$year1[i]
-    year2 <- year_triplets$year2[i]
-    year3 <- year_triplets$year3[i]
-
-    # Calculate and store result
-    cat("Processing years:", year1, "to", year2, "to", year3, "\n")
-    result <- analyse_triple_repeat_sales(data, year1, year2, year3, cpi)
-
-    if (!is.null(result) && nrow(result) > 0) {
-      results_list[[paste0(year1, "_", year2, "_", year3)]] <- result
-    }
-  }
-
-  # Combine all results
-  if (length(results_list) > 0) {
-    combined_results <- bind_rows(results_list)
-    return(combined_results)
-  } else {
-    cat("No valid results found for any year combination.\n")
-    return(NULL)
-  }
-}
-
-# Generate all possible triplets
-all_triple_repeat_sales <-
-  generate_triplet_combinations(
-    price_paid_data |> filter(quantile <= 10), # Filter based on quantile for quicker analysis
-    start_year = 1995,
-    end_year = 2009,
-    cpi = cpi
-  )
-
-# Compare CPI-adjusted first sale to third sale where the second sale is higher than either
-triplet_sales_in_2009 <-
-  all_triple_repeat_sales |>
-  filter(year_third == 2009) |>
-  filter(price_second > price_first & price_third < price_second) |>
-  filter(price_third <= 40000) |>
-  filter(quantile_first <= 5) |>
-  filter(abs(quantile_first - quantile_third) <= 4) |>
-  filter(abs(percent_difference_1_3) <= 5) |>
-  arrange(price_third) |>
-  select(-c(Postcode, PAON, SAON, Street)) |>
-  select(`Local Authority`, everything())
-
-# Plot data
-triplet_sales_in_2009 |>
-  ggplot(aes(x = cpi_adjusted_price_1_3, y = price_third)) +
-  geom_abline(
-    slope = 1, # Reference line where CPI-adjusted price equals actual price
-    intercept = 0,
-    linetype = "dashed",
-    colour = "#AFAFAF"
-  ) +
-  geom_point(aes(colour = percent_difference_1_3)) +
-  geom_text_repel(
-    data = triplet_sales_in_2009,
-    aes(
-      x = cpi_adjusted_price_1_3,
-      y = price_third,
-      label = year_label
-    ),
-    size = 3
-  ) +
-  scale_colour_gradient(
-    low = "#00B0F6",
-    high = "#F8766D",
-    breaks = c(-4, -2, 0, 2, 4),
-    labels = scales::label_percent(scale = 1)
-  ) +
-  scale_x_continuous(labels = scales::label_comma()) +
-  scale_y_continuous(labels = scales::label_comma()) +
-  labs(
-    # title = "Repeat sales: multiple sales with first year CPI-adjusted to 2009 versus 2009 sales prices",
-    x = "First year sales price adjusted by CPI to 2009 (£)",
-    y = "2009 sales price (£)",
+    # title = paste0("Repeat sales: multiple sales with first year CPI-adjusted to ", end_year, " versus ", end_year, " sales prices"),
+    x = paste0("First sales price adjusted by CPI to ", end_year, " (£)"),
+    y = paste0("Sale price (£)  ●  ", end_year, " sale  ○  Intermediate sale"),
     colour = "Percentage difference from CPI-adjusted sales price"
   ) +
   theme_minimal() +
