@@ -40,7 +40,7 @@ repeat_sales <-
 
 # CPI data: https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23
 cpi <-
-  read_csv("Data/series-201125.csv") |>
+  read_csv("Data/series-300426.csv") |>
   rename(Date = Title, Index = `CPI INDEX 00: ALL ITEMS 2015=100`) |>
   filter(str_detect(Date, "JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC")) |>
   mutate(
