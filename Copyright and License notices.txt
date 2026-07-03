@@ -8,26 +8,25 @@ HM Land Registry Price Paid Data
 https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads
 Contains HM Land Registry data © Crown copyright and database right 2021. This data is licensed under the Open Government Licence v3.0.
 
-ONS Postcode Directory (August 2025) for the UK
-https://geoportal.statistics.gov.uk/datasets/3be72478d8454b59bb86ba97b4ee325b/about
+ONS Postcode Directory (May 2026) for the UK
+https://geoportal.statistics.gov.uk/datasets/6fff67d204fd4f339591ed667a6e3642/about
 Source: Office for National Statistics licensed under the Open Government Licence v.3.0
 
 Local Authority Districts (April 2025) Names and Codes in the UK
 https://www.data.gov.uk/dataset/b2c91962-58e7-40f1-ad56-7aa2473a93fd/local-authority-districts-april-2025-names-and-codes-in-the-uk-v21
 Source: Office for National Statistics licensed under the Open Government Licence v.3.0
 
-Local Authority Districts (May 2025) Boundaries UK BFE
-https://geoportal.statistics.gov.uk/datasets/ons::local-authority-districts-may-2025-boundaries-uk-bfe-v2/about
+Local Authority District to Region (April 2025) Lookup in EN (V2)
+https://www.data.gov.uk/dataset/c1d7290e-c00c-411d-a499-32e222b7bb59/local-authority-district-to-region-april-2025-lookup-in-en-v21
 Source: Office for National Statistics licensed under the Open Government Licence v.3.0
-Contains OS data © Crown copyright and database right 2025
 
-Consumer price inflation time series (MM23), CPI INDEX 00: ALL ITEMS 2015=100
-https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7bt/mm23
+Local Authority Districts (May 2024) Boundaries UK BGC
+https://geoportal.statistics.gov.uk/datasets/f3528c2d6d454edab74f2648cc6a45f6_0/
 Source: Office for National Statistics licensed under the Open Government Licence v.3.0
+Contains OS data © Crown copyright and database right 2024
 
 ONS House price to workplace-based earnings ratio
-https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/
-ratioofhousepricetoworkplacebasedearningslowerquartileandmedian
+https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/ratioofhousepricetoworkplacebasedearningslowerquartileandmedian
 Source: Office for National Statistics licensed under the Open Government Licence v.3.0
 
 Bank of England database
