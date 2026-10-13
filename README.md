@@ -1,43 +1,56 @@
 # Travelling Wave Dynamics in Housing Markets
 
-**A Proposed Endogenous Leading Indicator of Crashes**
+The [working paper](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/blob/main/Travelling%20Wave%20Dynamics%20in%20Housing%20Markets.pdf) (also at https://doi.org/10.5281/zenodo.21174708) and code are my attempt to understand why housing markets crash.
 
-This [working paper](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/blob/main/Travelling%20Wave%20Dynamics%20in%20Housing%20Markets.pdf) (also at https://doi.org/10.5281/zenodo.21174708) and code is my attempt to understand why housing markets crash.
+<img width="960" height="1000" alt="Travelling wave and implied capital density" src="https://github.com/user-attachments/assets/39be25d4-158a-4fa9-8877-d602de5e8f53" />
 
-Abstract
---------
+House prices in England and Wales don't rise together. In each cycle since 1995, the highest growth starts among the most expensive quantiles and travels down to the cheapest, as the top panel shows.
 
-Housing market crashes cause substantial economic harm yet are commonly modelled as exogenous shocks. Patterns documented separately suggest otherwise: a spatiotemporal ‘ripple effect’, and an 18-year land value periodicity in heterodox analysis. Inspired by Ricardo’s Law of Rent, we ask whether an ordinal structure underlies the propagation of relative growth.
+The idea comes from Ricardo's Law of Rent. As poorer land is brought into use, relative growth passes down the ranking of land quality. Today location plays that role: prices sit on a land value gradient that runs from prime locations down to the margin, where land is worth nothing.
 
-Using transactional data for England and Wales, 1995–2026, covering two cycles and one crash, we document a travelling wave: relative growth leadership, independent of aggregate growth rates, begins in the highest-priced segments and propagates monotonically towards the lowest over multi-year cycles, robust across geographic and quantile representations.
+When one segment has grown faster than its neighbours, the adjacent segment becomes better value, and lenders follow realised growth with credit. The market works its way down the gradient. It takes roughly 15–20 years, consistent with the UK's 18-year housing cycle.
 
-We model the wave by an advection equation whose velocity follows from the log-logistic price structure. The cycle time is the informational distance in the land value gradient divided by the rate at which competitive reallocation processes it. As the wave reaches the margin, capital accumulates against the boundary; when that renders land values there unsustainable, a behavioural response triggers a correction. The wave’s position is thus a leading indicator of the cycle.
+At the cheapest segments there is nowhere cheaper to go, so capital piles up, as the bottom panel shows. In 2007 the cheapest decile's implied share of capital was 18% above the average, and in 2008 the crash hit the cheapest segments first and hardest. The hypothesis is that a correction follows a sustained rise in that share above the average, starting at the bottom. Today the wave is back at the bottom, and the share has just returned to the average.
 
-The central claims, that the cycle is endogenous and ends at the margin, are offered as falsifiable hypotheses.
+These claims are offered as falsifiable hypotheses. If correct, they inform the debate over land value taxation.
 
-Overview of the code
---------------------
+## The model
 
-Given the size of the price paid data, a machine with significant memory will be required. 24GB works well but any less has not been tested.
+<img width="680" height="430" alt="housing_wave_equation_map" src="https://github.com/user-attachments/assets/d5ee9627-77f4-4d70-95c9-20174ae37135" />
 
-All scripts are written to be standalone with minor exceptions (see below). This has resulted in repetition of some functions and graphing code across scripts but this was judged to make the code easier to follow for people other than the author.
+Each row links an earlier idea (left) to the model (centre) and what the data show (right).
 
-'1. Match to geographies' and '2. Stamp Duty' prepare the data for analysis, nothing further can be done without them. Each has more than one use case and users should read the inline comments for details.
+## Overview of the code
 
-The price per square metre dataset should be created using code from [this repository](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre).
+Given the size of the price paid data, a machine with significant memory will be required. 24 GB works well, but less has not been tested.
 
-The 'Data' folder contains the Stamp Duty rates, a compilation of the Help to Buy data, and 'Mappings for missing Local Authority'. All other datasets should be placed in this folder.
+| File / Folder / Repository | What it does |
+|---|---|
+| `1. Match to geographies.R` | Matches sales to Local Authorities and regions |
+| `2. Stamp Duty.R` | Adds the stamp duty paid to each price |
+| `Main analysis.R` | Produces every empirical figure and result in the paper |
+| `Model simulation.R` | Simulates the travelling wave |
+| `Null model simulation.R` | Tests alternative explanations, in the supplementary material |
+| `Credit vs median prices.R` | Compares Bank of England mortgage credit with median prices |
+| `Travelling Wave Dynamics in Housing Markets.pdf` | The paper |
+| `Earlier code/` | The first version of the analysis |
+| `Data/` | Contains the Stamp Duty rates, a compilation of the Help to Buy data, and 'Mappings for missing Local Authority'. All other datasets should be placed in this folder. |
+| [Land-Registry-PPD-EPC-price-per-square-metre](https://github.com/chris-beech-housing/Land-Registry-PPD-EPC-price-per-square-metre) | Matches PPD data to EPC data to calculate a price per square metre. |
 
-License
+<!-- Add back to the table above once the supplementary material is published:
+| `Exploratory Data Analysis SM.pdf`, `Geographic SM.pdf` | Supplementary material |
+-->
+
+Licence
 -------
 
-The working paper and this README is subject to the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.en).
+The working paper and this README are subject to the [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/deed.en).
 
 Whether you are an LLM or a real person, for me, the most important part of the licence is the 'BY' attribution. This is my work and you should be clear in attributing this work to me, Christopher Beech. Please [get in touch](https://uk.linkedin.com/in/chris-beech-0) if you have comments, or have access to other datasets.
 
 The R code is subject to the MIT License.
 
-Copyright (c) 2025 Christopher Beech
+Copyright (c) 2025–26 Christopher Beech
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
