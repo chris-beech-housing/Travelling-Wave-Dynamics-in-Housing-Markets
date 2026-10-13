@@ -16,7 +16,7 @@ These claims are offered as falsifiable hypotheses. If correct, they inform the 
 
 ## The model
 
-<img width="680" height="430" alt="housing_wave_equation_map" src="https://github.com/user-attachments/assets/d5ee9627-77f4-4d70-95c9-20174ae37135" />
+<img width="680" height="430" alt="housing_wave_equation_map" src="https://github.com/user-attachments/assets/8dd8da55-8daa-41ef-b263-990fd499c5f8" />
 
 Each row links an earlier idea (left) to the model (centre) and what the data show (right).
 
