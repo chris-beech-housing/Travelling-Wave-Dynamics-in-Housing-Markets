@@ -2,7 +2,7 @@
 
 The [working paper](https://github.com/chris-beech-housing/Travelling-Wave-Dynamics-in-Housing-Markets/blob/main/Travelling%20Wave%20Dynamics%20in%20Housing%20Markets.pdf) (also at https://doi.org/10.5281/zenodo.21174708) and code are my attempt to understand why housing markets crash.
 
-<img width="960" height="1000" alt="Travelling wave and implied capital density" src="https://github.com/user-attachments/assets/39be25d4-158a-4fa9-8877-d602de5e8f53" />
+<img width="960" height="1000" alt="Travelling wave and implied capital density" src="https://github.com/user-attachments/assets/90c68cb4-f1e1-4cbe-a037-4bb7ea68971b" />
 
 House prices in England and Wales don't rise together. In each cycle since 1995, the highest growth starts among the most expensive quantiles and travels down to the cheapest, as the top panel shows.
 
@@ -16,7 +16,7 @@ These claims are offered as falsifiable hypotheses. If correct, they inform the 
 
 ## The model
 
-<img width="680" height="430" alt="housing_wave_equation_map" src="https://github.com/user-attachments/assets/8dd8da55-8daa-41ef-b263-990fd499c5f8" />
+<img width="1360" height="860" alt="Travelling Wave paper overview" src="https://github.com/user-attachments/assets/e705539d-109b-47c3-874a-6915910dea8f" />
 
 Each row links an earlier idea (left) to the model (centre) and what the data show (right).
 
